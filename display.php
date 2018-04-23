@@ -9,7 +9,8 @@
 ?>
 <?php
 	$acct=$_GET['acct'];
-	$result = mysqli_query($mysqli,"SELECT * FROM employee where Account_Number = ".(int)$acct."");
+	$query = mysqli_query($mysqli,"select * from Customer where Account_Number = ".(int)$acct."");
+	$result=mysqli_fetch_assoc($query);
 	echo "<body>";
 	echo "<table>";
 	echo "
